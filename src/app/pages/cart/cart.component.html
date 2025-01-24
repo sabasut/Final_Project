@@ -1,0 +1,40 @@
+<div class="cart-container">
+
+    <div class="log-out">
+        <button (click)="returnBack()">
+            <img src="assets/icons8-return-100.png"> Go back
+        </button>
+    </div>
+    <h2>Your Cart</h2>
+    <hr>
+    <div *ngFor="let item of cartItems" class="cart-item">
+        <div class="cart-item-image">
+            <img [src]="item.image" [alt]="item.title" />
+        </div>
+        <div class="cart-item-details">
+            <h3>{{ item.title }}</h3>
+            <p>Price: ${{ item.price }}</p>
+            <p>Quantity: {{ item.quantity }}</p>
+            <div class="contentWrapper">
+                <button class="remove" (click)="removeFromCart(item.id)">
+                    <img src="assets/remove.png">
+                    Remove</button>
+                <div class="counter" *ngIf="isProductInCart(item.id)">
+                    <button class="btn-decrement" (click)="decrement(item)">-</button>
+                    <span class="count">{{ getProductQuantity(item.id) }}</span>
+                    <button class="btn-increment" (click)="increment(item)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="cartItems.length === 0" class="empty-cart-message">
+        Your cart is empty.
+    </div>
+
+    <hr class="secondHr">
+
+    <div *ngIf="cartItems.length > 0" class="sum">
+        <span>Sum : </span>
+        <span> $ {{countSum}} </span>
+    </div>
+</div>

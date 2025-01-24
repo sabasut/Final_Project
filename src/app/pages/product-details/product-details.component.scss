@@ -1,0 +1,118 @@
+.mainDiv {height: 100vh;
+
+    background-color: rgb(237, 246, 248);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+
+    .log-out {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+
+        button {
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 15px;
+            background-color: rgb(129, 128, 126);
+            border: 1px solid #0c0404b2;
+            border-radius: 10px;
+            color: #FFFFFF;
+            cursor: pointer;
+
+            img {
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .product-details {
+        height: 70%;
+        width: 50%;
+        border: 2px solid rgb(9, 31, 65);
+        border-radius: 22px;
+        text-align: center;
+        padding: 30px;
+        background-color: rgb(171, 213, 241);
+
+        button {
+            border: none;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            background-color: rgb(69, 107, 69);
+            border-radius: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: rgb(41, 83, 41);
+            color: #FFFFFF;
+
+        }
+
+
+        img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 50px;
+            border-radius: 25px;
+        }
+
+        .counter {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+
+            .btn-decrement,
+            .btn-increment {
+                font-size: 13px;
+
+                padding: 5px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #33577c;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                transition: background-color 0.2s;
+            }
+
+            .btn-decrement:hover,
+            .btn-increment:hover {
+                background-color: #041a31;
+            }
+
+            .count {
+                font-size: 14px;
+                font-weight: bold;
+                min-width: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+}

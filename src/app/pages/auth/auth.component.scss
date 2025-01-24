@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff) format('woff');
+}
+
+
+.login-popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'FiraGO';
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 20px;
+}
+
+
+.content-wrapper {
+    background-color: #05335411;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    padding: 30px;
+    border:1px solid #05335449;
+    border-radius: 22px;
+
+}
+
+
+h2 {
+    text-align: center;
+
+    font-family: 'FiraGO';
+    padding: 0.8vh;
+    text-align: center;
+    font-size: 25px;
+    color: #18A4E1;
+}
+
+.input-fields {
+    height: 20%;
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2vh;
+}
+
+input {
+
+    min-height: 35px;
+    padding: 10px;
+    border: 0.5px solid #ccc;
+    height: 20px;
+    border-radius: 22px;
+}
+
+input:first-child {
+    margin-bottom: 25px;
+
+}
+
+
+.login {
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login button {
+    margin-top: 10px;
+    font-family: FiraGo;
+    padding: 10px 25px;
+    font-size: 16.5px;
+    background-color: #053354;
+    color: #ffff;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #053e7cbb;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+
+.incorrect_credentials {
+    width: 100%;
+    text-align: center;
+}
+
+.incorrect_credentials p {
+    font-family: FiraGo;
+    font-size: 14.5px;
+    margin: 10px;
+    color: red
+}
+
+
+
+.Errormessage {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    font-family: FiraGO;
+}
+.register-prompt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    margin-top: 40px;
+
+}
+
+.register-prompt button {
+    font-family: 'FiraGO';
+
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffff;
+    border: none;
+    border-radius: 1.3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #28a745;
+}
+
+.register-prompt button:hover {
+    background-color: #218838;
+}
+.register-prompt p{
+    font-family: FiraGo;
+    background-color: #ffff;
+    color: #000000;
+    font-size: 14px;
+
+}
+
+
+@media (max-width: 576px) {
+    .login-popup {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        width: 98%;
+    }
+
+    .input-fields input {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    .login {
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .login button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 19px;
+
+    }
+    input:first-child {
+        margin-bottom: 15px;
+    
+    }
+
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .login-popup {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        width: 98%;
+    }
+
+    .input-fields input {
+        height: 30px;
+        margin-top: 8px;
+    }
+
+    .login {
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .login button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 19px;
+
+    }
+    input:first-child {
+        margin-bottom: 20px;
+    
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .login-popup {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        width: 98%;
+    }
+
+    .input-fields input {
+        height: 25px;
+        margin-top: 8px;
+    }
+
+    .login {
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .login button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 19px;
+
+    }
+
+}
+
+

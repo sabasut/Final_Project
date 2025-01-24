@@ -1,0 +1,24 @@
+<div class="mainDiv">
+
+    <div class="log-out">
+        <button (click)="returnBack()">
+            <img src="assets/icons8-return-100.png"> Go back
+        </button>
+    </div>
+
+
+<h1>Product Details</h1>
+<div class="product-details" *ngIf="product">
+    <img [src]="product.image" alt="{{product.title}}">
+    <h2>{{product.title}}</h2>
+    <p>{{product.description}}</p>
+    <p>{{product.price | currency}}</p>
+    <button *ngIf="!isProductInCart(product.id)" mat-raised-button color="primary" (click)="addToCart()" [routerLink]="['/cart']" routerLinkActive="router-link-active" >Add to cart</button>
+    <div class="counter" *ngIf="isProductInCart(product.id)">
+        <button class="btn-decrement" (click)="decrement(product)">-</button>
+        <span class="count">{{ getProductQuantity(product.id) }}</span>
+        <button class="btn-increment" (click)="increment(product)">+</button>
+    </div>
+</div>
+    
+</div>

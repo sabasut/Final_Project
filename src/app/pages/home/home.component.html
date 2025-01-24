@@ -1,0 +1,42 @@
+<header class="ecommerce-header">
+    <div class="logo">
+        <a href="/">My Store</a>
+    </div>
+    <div class="user-actions" id="user-actions">
+        <div class="cart">
+            <a href="/cart">
+                <img src="/assets/cart-icon.png" alt="Cart">
+                <span class="cart-count">{{count}}</span>
+            </a>
+        </div>
+        <div class="user-profile">
+            <button (click)="signout()"> sign out</button>
+        </div>
+    </div>
+
+</header>
+
+
+
+<h1>Products List</h1>
+<div class="product-list">
+    <div class="product" *ngFor="let product of allproduct">
+        <img [src]="product.image" alt="{{product.title}}">
+        <h3>{{product.title}}</h3>
+        <p>{{product.price | currency}}</p>
+        <button *ngIf="!isProductInCart(product.id)" mat-raised-button color="primary" (click)="addToCart(product)">Add
+            to cart</button>
+
+        <!-- div გამოჩნდება მაშინ თუ cartItems ამ პროდუქციაზე უკვე რაოდენობა დამატებულია  -->
+        <div class="counter" *ngIf="isProductInCart(product.id)">
+            <button class="btn-decrement" (click)="decrement(product)">-</button>
+            <span class="count">{{ getProductQuantity(product.id) }}</span>
+            <button class="btn-increment" (click)="increment(product)">+</button>
+        </div>
+
+        <button class="view" [routerLink]="['/product', product.id]" routerLinkActive="router-link-active">
+            <img src="assets/view.png">
+            View
+            Details</button>
+    </div>
+</div>
